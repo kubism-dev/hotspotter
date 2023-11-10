@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>HotSpotter</title>
+		<style>
+			body {
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			.hotspot {
+				--pinSize: 1rem;
+				height: auto;
+				margin: 0 auto;
+				width: 100%;
+				max-width: 60rem;
+				position: relative;
+			}
+			img {
+				height: auto;
+				width: 100%;
+			}
+			.pin {
+				background: #000;
+				border: 2px solid #fff;
+				border-radius: 50%;
+				height: var(--pinSize);
+				position: absolute;
+				width: var(--pinSize);
+			}
+			.pin.has-tooltip:before {
+				background: rgba(0, 0, 0, 0.8);
+				border-radius: 0.5rem;
+				color: #fff;
+				content: attr(data-tooltip);
+				display: none;
+				font-size: 1rem;
+				margin-top: calc(var(--pinSize) + 0.5rem);
+				padding: 2rem;
+				position: absolute;
+				width: 10rem;
+			}
+			.pin:hover:before {
+				display: block;
+			}
+			h1 {
+				padding-bottom: 0;
+				line-height: 100%;
+			}
+			h1,
+			p {
+				text-align: center;
+				padding-bottom: 1rem;
+			}
+		</style>
+		<script src="hotspotter.js"></script>
+		<script src="script.js"></script>
+	</head>
+	<body>
+		<h1>HotSpotter</h1>
+		<p>Click to add pins</p>
+		<div class="hotspot">
+			<img
+				src="img/image.jpg"
+				alt="Image"
+			/>
+		</div>
+	</body>
+</html>
