@@ -2,7 +2,7 @@
 
 Shows and adds hotspots with tooltips to an image.
 
-[Demo](https://kubism-dev.github.io/hover-slide/)
+[Demo](https://kubism-dev.github.io/hotspotter/)
 
 ```javascript
 const image = new HotSpotter('.hotspot', {
